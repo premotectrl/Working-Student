@@ -1,0 +1,56 @@
+https://bitbucket.org/kukaaustin/mobile-robotics-frontend/src/master/
+
+ labels:["Connected","Unreliable","Disconnected","Disposed:no data"],
+
+"headers":{"http://www.localhost:63342"}
+
+  --proxy-config proxy.config.json --port 63342
+
+dist forlder for Output after building:
+D:\red-river-frontend\build\app\jspm\jspm_packages\npm\mobile-robotics-frontend@0.1.0\dist
+
+Commands:
+literServ  at D:\red-river-frontend.. bla bla:
+lite-server -c litesrv.json
+to install it: npm install lite-server -g
+
+combined build command: 
+tsc -p src/angular4/tsconfig.json && jspm build src/module.js dist/output.js --format cjs
+--- new
+tsc -p src/angular4/tsconfig.json && jspm build src/module.js dist/mobile-robotics.min.js --format cjs --minify
+
+to copy  build files to redfront folder for preview:
+robocopy D:\mobile-robotics-frontend\dist  D:\red-river-frontend\build\app\jspm\jspm_packages\npm\mobile-robotics-frontend@0.1.0\dist
+
+Login ID: PETER.MUGANO@KUKA.COM 
+Password: 724456225
+xVR1Xezf
+
+VUE:
+vue create name-proj
+cd name-proj
+npm run serve
+
+Vue Installation Options:
+npm install babel-core babel-loader babel-preset-es2015 webpack --save-dev
+
+npm install --save-dev typescript webpack ts-loader css-loader vue vue-loader vue-template-compiler
+
+npm install --save-dev vue-style-loader
+
+ npm install vue-custom-element --save-dev
+
+npm i webpack webpack-cli --save-dev
+
+npm install babel-loader@7.1.4
+
+npm i vue-loader@latest
+
+ plugins: [
+    new VueLoader.VueLoaderPlugin()
+    ]
+
+Set Npm Proxy just add  through: npm config edit e.g
+http-proxy=http://webproxy.kuka.int.kuka.com:80
+https-proxy=http://webproxy.kuka.int.kuka.com:80/
+strict-ssl=false
